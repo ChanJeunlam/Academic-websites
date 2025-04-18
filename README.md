@@ -195,6 +195,32 @@ https://chanjeunlam.github.io/Academic-websites/
 
 这一点很重要：即使您使用 GitHub Actions 部署，"Source" 设置仍应为 "Deploy from a branch"，因为 Actions 实际上是将文件部署到 `gh-pages` 分支。
 
+## 图床不显示
+
+需要添加的前缀是 `/Academic-websites`，这与您在 `next.config.mjs` 中设置的 `basePath` 相同。
+
+```
+// 修改前
+<Image
+  src="/thoughtful-scholar.png"
+  alt="Profile Photo"
+  width={400}
+  height={400}
+  className="object-cover"
+  priority
+/>
+
+// 修改后
+<Image
+  src="/Academic-websites/thoughtful-scholar.png"
+  alt="Profile Photo"
+  width={400}
+  height={400}
+  className="object-cover"
+  priority
+/>
+```
+
 ### 方法1：更新仓库设置中的工作流权限
 
 1. 前往 GitHub 仓库
