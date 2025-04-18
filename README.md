@@ -150,6 +150,24 @@ jobs:
    - 在 "Build and deployment" 部分，选择 "Source" 为 "GitHub Actions"
    - 等待 GitHub Actions 工作流完成，你的网站将在 `https://yourusername.github.io/your-repo-name` 上线
 
+
+10. debug
+
+- GitHub 权限问题。错误信息显示 GitHub Actions 机器人没有权限推送到您的仓库：
+
+```
+remote: Permission to ChanJeunlam/Academic-websites.git denied to github-actions[bot].
+fatal: unable to access 'https://github.com/ChanJeunlam/Academic-websites.git/': The requested URL returned error: 403
+```
+
+### 方法1：更新仓库设置中的工作流权限
+
+1. 前往 GitHub 仓库
+2. 点击 "Settings"（设置）选项卡
+3. 在左侧菜单中，点击 "Actions" > "General"
+4. 在 "Workflow permissions" 部分，选择 "Read and write permissions"
+5. 保存更改
+
 ### 使用自定义域名
 
 如果你想使用自定义域名而不是 GitHub Pages 默认的域名，可以按照以下步骤操作：
