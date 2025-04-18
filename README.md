@@ -130,6 +130,8 @@
 
    在 `public` 目录中创建一个空的 `.nojekyll` 文件，以防止 GitHub Pages 使用 Jekyll 处理你的站点。
 
+   这个空文件告诉 GitHub Pages 不要使用 Jekyll 处理你的站点，这对于 Next.js 静态导出很重要。
+
    \`\`\`bash
    touch public/.nojekyll
    \`\`\`
