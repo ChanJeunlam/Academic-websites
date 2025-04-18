@@ -176,6 +176,25 @@ https://chanjeunlam.github.io/Academic-websites/
 
 1. GitHub Pages 有时需要几分钟才能完全部署
 
+3. 检查 gh-pages 分支
+
+现在您的工作流已成功运行，应该已经创建了 `gh-pages` 分支：
+
+1. 前往您的 GitHub 仓库
+2. 点击分支下拉菜单（显示 "main"）
+3. 查看是否有 `gh-pages` 分支
+4. 如果有，点击进入查看内容，确认有 `index.html` 文件在根目录
+
+## 检查 GitHub Pages 设置
+
+1. 前往仓库的 "Settings" > "Pages"
+2. 确认以下设置：
+
+1. Source: 应该设置为 "Deploy from a branch"（不是 "GitHub Actions"）
+2. Branch: 应该选择 "gh-pages" 和 "/ (root)"
+
+这一点很重要：即使您使用 GitHub Actions 部署，"Source" 设置仍应为 "Deploy from a branch"，因为 Actions 实际上是将文件部署到 `gh-pages` 分支。
+
 ### 方法1：更新仓库设置中的工作流权限
 
 1. 前往 GitHub 仓库

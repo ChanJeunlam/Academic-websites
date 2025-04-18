@@ -143,7 +143,7 @@ export default function TeachingSection() {
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                      <Image src="/focused-learner.png" alt="Student" fill className="object-cover" />
+                      <Image src="/Academic-websites/focused-learner.png" alt="Student" fill className="object-cover" />
                     </div>
                     <div>
                       <p className="font-medium text-[#34495E] dark:text-gray-300">李明</p>
@@ -158,7 +158,7 @@ export default function TeachingSection() {
 
                   <div className="flex items-start">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                      <Image src="/focused-learner.png" alt="Student" fill className="object-cover" />
+                      <Image src="/Academic-websites/focused-learner.png" alt="Student" fill className="object-cover" />
                     </div>
                     <div>
                       <p className="font-medium text-[#34495E] dark:text-gray-300">王芳</p>

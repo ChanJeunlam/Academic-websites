@@ -14,7 +14,7 @@ export default function ProfileSection() {
         <div className="flex flex-col items-center md:items-start space-y-4">
           <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-[#2C3E50] dark:border-[#E67E22]">
             <Image
-              src="/thoughtful-scholar.png"
+              src="/Academic-websites/thoughtful-scholar.png"
               alt="Profile Photo"
               width={400}
               height={400}

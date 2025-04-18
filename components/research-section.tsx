@@ -18,7 +18,7 @@ export default function ResearchSection() {
       descriptionZh: "研究多物理场耦合模拟方法，包括流体-结构相互作用、热-机械耦合等复杂系统。",
       descriptionEn:
         "Research on multiphysics coupling simulation methods, including fluid-structure interaction, thermal-mechanical coupling, and other complex systems.",
-      image: "/coupled-flow-thermal-analysis.png",
+      image: "/Academic-websites/coupled-flow-thermal-analysis.png",
     },
     {
       id: "adaptive",
@@ -26,7 +26,7 @@ export default function ResearchSection() {
       descriptionZh: "开发自适应高阶数值方法，提高计算精度和效率，适用于复杂几何和多尺度问题。",
       descriptionEn:
         "Development of adaptive high-order numerical methods to improve computational accuracy and efficiency, suitable for complex geometries and multiscale problems.",
-      image: "/numerical-simulation-refinement.png",
+      image: "/Academic-websites/numerical-simulation-refinement.png",
     },
     {
       id: "mesh",
@@ -34,7 +34,7 @@ export default function ResearchSection() {
       descriptionZh: "研究分层网格方法，实现高效的网格细化和粗化，优化计算资源分配。",
       descriptionEn:
         "Research on hierarchical mesh methods, implementing efficient mesh refinement and coarsening, optimizing computational resource allocation.",
-      image: "/hierarchical-mesh-visualization.png",
+      image: "/Academic-websites/hierarchical-mesh-visualization.png",
     },
     {
       id: "hpc",
@@ -42,7 +42,7 @@ export default function ResearchSection() {
       descriptionZh: "探索高性能计算技术，包括并行算法、GPU加速和分布式计算框架。",
       descriptionEn:
         "Exploration of high-performance computing technologies, including parallel algorithms, GPU acceleration, and distributed computing frameworks.",
-      image: "/data-vortex.png",
+      image: "/Academic-websites/data-vortex.png",
     },
     {
       id: "applications",
@@ -50,7 +50,7 @@ export default function ResearchSection() {
       descriptionZh: "将数值方法应用于流体力学、空气声学和天体物理学等领域的实际问题。",
       descriptionEn:
         "Application of numerical methods to practical problems in fluid mechanics, aeroacoustics, and astrophysics.",
-      image: "/computational-aeroacoustics-flow.png",
+      image: "/Academic-websites/computational-aeroacoustics-flow.png",
     },
   ]
 
@@ -193,7 +193,7 @@ export default function ResearchSection() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="flex flex-col items-center">
                 <div className="w-32 h-32 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center mb-4">
-                  <Image src="/abstract-university-crest.png" alt="Collaboration Partner" width={100} height={100} />
+                  <Image src="/Academic-websites/abstract-university-crest.png" alt="Collaboration Partner" width={100} height={100} />
                 </div>
                 <p className="text-center text-[#34495E] font-medium">
                   {language === "zh" ? "清华大学" : "Tsinghua University"}
@@ -202,7 +202,7 @@ export default function ResearchSection() {
 
               <div className="flex flex-col items-center">
                 <div className="w-32 h-32 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center mb-4">
-                  <Image src="/abstract-research-logo.png" alt="Collaboration Partner" width={100} height={100} />
+                  <Image src="/Academic-websites/abstract-research-logo.png" alt="Collaboration Partner" width={100} height={100} />
                 </div>
                 <p className="text-center text-[#34495E] font-medium">
                   {language === "zh" ? "中科院计算所" : "Institute of Computing Technology, CAS"}
@@ -211,14 +211,14 @@ export default function ResearchSection() {
 
               <div className="flex flex-col items-center">
                 <div className="w-32 h-32 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center mb-4">
-                  <Image src="/global-knowledge-emblem.png" alt="Collaboration Partner" width={100} height={100} />
+                  <Image src="/Academic-websites/global-knowledge-emblem.png" alt="Collaboration Partner" width={100} height={100} />
                 </div>
                 <p className="text-center text-[#34495E] font-medium">MIT</p>
               </div>
 
               <div className="flex flex-col items-center">
                 <div className="w-32 h-32 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center mb-4">
-                  <Image src="/abstract-tech-logo.png" alt="Collaboration Partner" width={100} height={100} />
+                  <Image src="/Academic-websites/abstract-tech-logo.png" alt="Collaboration Partner" width={100} height={100} />
                 </div>
                 <p className="text-center text-[#34495E] font-medium">
                   {language === "zh" ? "华为研究院" : "Huawei Research Institute"}
