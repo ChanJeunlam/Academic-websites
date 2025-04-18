@@ -31,13 +31,10 @@ jobs:
         uses: actions/configure-pages@v3
         
       - name: Install dependencies
-        run: npm ci
+        run: npm install --legacy-peer-deps
         
       - name: Build with Next.js
         run: npm run build
-        
-      - name: Static HTML export with Next.js
-        run: npx next export
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2

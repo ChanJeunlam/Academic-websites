@@ -46,64 +46,63 @@
 
    在项目根目录创建 `.github/workflows/deploy.yml` 文件，内容如下：
 
-   \`\`\`yaml
-   name: Deploy to GitHub Pages
+```yaml
+name: Deploy to GitHub Pages
 
-   on:
-     push:
-       branches: [main]
-     workflow_dispatch:
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
-   permissions:
-     contents: read
-     pages: write
-     id-token: write
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-   concurrency:
-     group: "pages"
-     cancel-in-progress: false
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
-   jobs:
-     build:
-       runs-on: ubuntu-latest
-       steps:
-         - name: Checkout
-           uses: actions/checkout@v3
-         
-         - name: Setup Node
-           uses: actions/setup-node@v3
-           with:
-             node-version: 18
-             cache: 'npm'
-             
-         - name: Setup Pages
-           uses: actions/configure-pages@v3
-           
-         - name: Install dependencies
-           run: npm ci
-           
-         - name: Build with Next.js
-           run: npm run build
-           
-         - name: Static HTML export with Next.js
-           run: npx next export
-           
-         - name: Upload artifact
-           uses: actions/upload-pages-artifact@v2
-           with:
-             path: ./out
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+          
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+        
+      - name: Build with Next.js
+        run: npm run build
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./out
 
-     deploy:
-       environment:
-         name: github-pages
-         url: ${{ steps.deployment.outputs.page_url }}
-       runs-on: ubuntu-latest
-       needs: build
-       steps:
-         - name: Deploy to GitHub Pages
-           id: deployment
-           uses: actions/deploy-pages@v2
-   \`\`\`
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+```
+
+
 
 5. **修改 Next.js 配置**
 
