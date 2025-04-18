@@ -160,6 +160,15 @@
 
 9. **在 GitHub 仓库设置中启用 GitHub Pages**
 
+**需要先将仓库设为公开**（如果不想升级账户）：
+
+    - 在您当前的设置页面，点击左侧导航栏中的 "General"
+    - 滚动到页面底部的 "Danger Zone" 区域
+    - 找到 "Change repository visibility" 选项
+    - 点击 "Change visibility" 按钮
+    - 选择 "Make public"
+    - 按照提示确认更改
+
    - 在 GitHub 仓库页面，点击 "Settings"
    - 在左侧导航栏中点击 "Pages"
    - 在 "Build and deployment" 部分，选择 "Source" 为 "GitHub Actions"
