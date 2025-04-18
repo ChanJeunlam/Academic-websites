@@ -160,6 +160,23 @@ remote: Permission to ChanJeunlam/Academic-websites.git denied to github-actions
 fatal: unable to access 'https://github.com/ChanJeunlam/Academic-websites.git/': The requested URL returned error: 403
 ```
 
+GitHub Pages 通常需要几分钟时间来完成部署后的设置。如果您现在访问上面的 URL，您应该能够看到您的学术个人主页。
+
+```
+https://chanjeunlam.github.io/Academic-websites/
+```
+
+1. **检查 next.config.mjs 文件**：
+
+1. 确保您的 `next.config.mjs` 文件中正确设置了 `basePath` 和 `assetPrefix`
+2. 它们应该设置为 `/Academic-websites`（与您的仓库名称匹配）
+
+
+
+2. **等待几分钟**：
+
+1. GitHub Pages 有时需要几分钟才能完全部署
+
 ### 方法1：更新仓库设置中的工作流权限
 
 1. 前往 GitHub 仓库
