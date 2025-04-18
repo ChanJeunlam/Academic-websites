@@ -121,7 +121,6 @@ jobs:
      "dev": "next dev",
      "build": "next build",
      "start": "next start",
-     "export": "next export",
      "lint": "next lint"
    }
    \`\`\`
