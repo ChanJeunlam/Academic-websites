@@ -1,17 +1,11 @@
 "use client"
 
-import { createContext, useContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 import type { ThemeProviderProps } from "next-themes"
+import { useTheme as useNextTheme } from "next-themes"
 
 type Theme = "dark" | "light" | "system"
-
-interface ThemeContextType {
-  theme: Theme
-  setTheme: (theme: Theme) => void
-}
-
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   const [mounted, setMounted] = useState(false)
@@ -25,12 +19,6 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
 }
 
 export function useTheme() {
-  const context = useContext(ThemeContext)
-  const nextThemes = useContext(NextThemesProvider)
-
-  if (!nextThemes) {
-    throw new Error("useTheme must be used within a ThemeProvider")
-  }
-
-  return nextThemes
+  // 直接使用 next-themes 提供的 useTheme hook
+  return useNextTheme()
 }
