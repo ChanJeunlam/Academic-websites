@@ -1,7 +1,14 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-const Button = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
+// 添加这个接口来定义 variant 和 size 属性
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost"
+  size?: "default" | "sm" | "lg" | "icon"
+}
+
+// 使用新的 ButtonProps 接口替代 React.ButtonHTMLAttributes<HTMLButtonElement>
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, children, variant = "default", size = "default", ...props }, ref) => {
     return (
       <button
@@ -28,7 +35,12 @@ const Button = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HT
 )
 Button.displayName = "Button"
 
-const Badge = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+// 为 Badge 组件添加类型定义
+export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+  variant?: "default" | "secondary" | "destructive" | "outline"
+}
+
+const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
   ({ className, children, variant = "default", ...props }, ref) => {
     return (
       <div
